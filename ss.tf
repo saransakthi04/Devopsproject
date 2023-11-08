@@ -8,19 +8,18 @@
 ### vim instance-with-ssh-keys.tf ####
 
 provider "aws" {
-  region     = "ap-south-1"
+  region     = "ap-southeast-2"
 }
 
 
 resource "aws_instance" "Test-Server" {
-  ami           = "ami-0447a12f28fddb066"
+  ami           = "ami-07b5c2e394fccab6e"
   instance_type = "t2.micro"
   key_name = "terraform_ec2_key"
+  tags = {
+Name = "Saranya-Server"
 }
-
-resource "aws_key_pair" "terraform_ec2_key" {
-	key_name = "terraform_ec2_key"
-	public_key = "${file("terraform_ec2_key.pub")}"
+}
 }
 
 #### file ends here ####
