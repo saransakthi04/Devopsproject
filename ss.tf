@@ -15,7 +15,7 @@ provider "aws" {
 resource "aws_instance" "Test-Server" {
   ami           = "ami-07b5c2e394fccab6e"
   instance_type = "t2.micro"
-  key_name = "terraform_ec2_key"
+  
   tags = {
 Name = "Saranya-Server"
 }
