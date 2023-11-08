@@ -20,7 +20,7 @@ resource "aws_instance" "Test-Server" {
 Name = "Saranya-Server"
 }
 }
-}
+
 
 #### file ends here ####
 # terraform validate
